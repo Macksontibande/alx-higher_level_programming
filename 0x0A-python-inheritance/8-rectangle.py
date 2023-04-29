@@ -1,22 +1,21 @@
 #!/usr/bin/python3
+"""This is a module container of the function 7-base_geometry.py
 """
-Program for a class Rectangle that inherits from BaseGeometry (7-base_geometry.py)
-add width and heigth
-"""
-
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """create subclass Rectanble of BaseGeometry"""
+    """A representation of a rectangle and
+       Class that inherits from BaseGeometry
+    """
     def __init__(self, width, height):
+        """Initializing function
+            Args:
+                width: variable to be initialized
+                height: variable to be initialized
         """
-        width and height must be privat
-        and must be positive integer
-        """
-        self.__width = width
-        self.__height = height
-
         self.integer_validator("width", width)
+        self.__width = width
         self.integer_validator("height", height)
+        self.__height = height
