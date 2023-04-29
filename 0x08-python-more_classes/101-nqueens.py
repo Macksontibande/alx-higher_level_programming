@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard.
+N queens backtracking program to print the coordinates of N queens
+on an NxN grid such that they are all in non-attacking positions
 """
 
 
