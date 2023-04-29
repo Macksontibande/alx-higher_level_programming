@@ -3,9 +3,8 @@
 The test to use 101-lazy_lazy_matrix_mul module
 ====================================
 
-This test is for computation of matrices(multiplication).
-The multiplication of the matrices must be possible if not an
-error is raised.
+The following test is for matrix multiplicatio.
+The matrix errors encountered will be sorted accordingly.
 
 Importing the 100-matrices_mul module
 =====================================
