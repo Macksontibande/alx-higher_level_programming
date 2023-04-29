@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-    Program for a function that returns the list of available 
-    attributes and methods of an object
+Program for a function that returns the list of available 
+attributes and methods of an object
 """
 
 
