@@ -1,12 +1,11 @@
-# This is a guid for matrix_mul
+# Module "100-matrix_mul"
 ====================================
-Test  100-matrix_mul module
+The test to use 100-matrix_mul module
 ====================================
 
-The test is for matrix multiplication.
-The test allow for computation of matrix.
+The following test is for matrix multiplicatio.
+The matrix errors encountered will be sorted accordingly.
 
-Module 100-matrices_mul
 Importing the 100-matrices_mul module
 =====================================
         >>> matrix_mul = __import__("100-matrix_mul").matrix_mul
