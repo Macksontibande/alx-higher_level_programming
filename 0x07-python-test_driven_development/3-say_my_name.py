@@ -1,10 +1,16 @@
 #!/usr/bin/python3
 """
-    Program that prints My name is <first name> <last name>
+    Program for a Module to printmy full name.
 """
 
 
 def say_my_name(first_name, last_name=""):
+    """
+        Prints My name is <first_name> <last_name>
+        Args:
+            first_name: first string
+            last_name: second string
+    """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
 
