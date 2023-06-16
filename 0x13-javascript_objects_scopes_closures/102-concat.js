@@ -1,7 +1,10 @@
-#!/usr/bin/nodei
+#!/usr/bin/node
 
 const fs = require('fs');
-const argv = process.argv;
-const file1 = fs.readFileSync(argv[2], 'utf-8').toString();
-const file2 = fs.readFileSync(argv[3], 'utf-8').toString();
-fs.writeFileSync(argv[4], file1 + file2);
+const fileA = process.argv[2];
+const fileB = process.argv[3];
+const fileC = process.argv[4];
+
+const dataA = fs.readFileSync(fileA, { encoding: 'utf8' });
+const dataB = fs.readFileSync(fileB, { encoding: 'utf8' });
+fs.writeFileSync(fileC, dataA + dataB, { encoding: 'utf8' });
