@@ -1,22 +1,16 @@
 #!/usr/bin/python3
-"""The script that lists all State objects, and corresponding City objects"""
+"""
+A City class
+"""
 
-import sys
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+import sqlalchemy
+from sqlalchemy import Column, Integer, String, ForeignKey
 from relationship_state import Base, State
-from relationship_city import City
 
-if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format
-                           (sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
-    Base.metadata.create_all(engine)
-    Session = sessionmaker(bind=engine)
-    session = Session()
-    new_state = State(name='California')
-    new_city = City(name='San Francisco')
-    new_state.cities.append(new_city)
-    session.add(new_state)
-    session.commit()
-    session.close()
+
+class City(Base):
+    """Representation of a city"""
+    __tablename__ = "cities"
+    id = Column(Integer, primary_key=True)
+    name = Column(String(128), nullable=False)
+    state_id = Column(Integer, ForeignKey('states.id'))
