@@ -1,3 +1,3 @@
 #!/bin/bash 
 # Sends passed requested argument, and displays only the status response.
-curl -s -L -X HEAD -w "%{http_code}" "$1"
+curl -sI -w '%{response_code}' "$1" -o /dev/null
